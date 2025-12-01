@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic settings -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title & description -->
+    <title>Marek Sigmund – Web Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Marek Sigmund – a web developer creating fullstack applications in .NET, Angular, Node.js and Laravel. Explore my projects and learn about my approach to programming."
+    />
+
+    <!-- SEO / Open Graph (social media preview) -->
+    <meta
+      property="og:title"
+      content="Marek Sigmund – Web Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore web projects and applications created by Marek Sigmund – from frontend to backend and API integrations."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mareksigmund.github.io/" />
+    <meta property="og:image" content="assets/icon/og-preview.png" />
+
+    <!-- Favicon and icons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icon/ms-favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icon/ms-favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icon/ms-favicon.png"
+    />
+
+    <!-- Fonts and styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Theme color (for mobile / PWA) -->
+    <meta name="theme-color" content="#1e3a8a" />
+  </head>
+
+  <body>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Hi! I'm Mark</h1>
+        <p>Web Developer | Programmer | AI & Data Science</p>
+        <div class="cta">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="assets/cv/CV_Marek.pdf" class="btn outline" target="_blank"
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section class="about-cards">
+      <div class="container">
+        <div class="about-card-grid">
+          <div class="about-card">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Who I Am</h3>
+            <p>
+              I am a web developer with an engineering degree and a master's
+              degree in AI & Data Science. Programming is my passion, and I find
+              the most satisfaction in creating applications that combine modern
+              web technologies with elements of artificial intelligence and data
+              analysis. I develop my skills through both academic and private
+              projects, always eager to explore new technologies and approaches,
+              adapting them flexibly to the needs of each project.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-code"></i>
+            <h3>What I Do</h3>
+            <p>
+              I build applications from scratch – from refined interfaces and
+              user-friendly experiences to backend services with my own API and
+              business logic. I’ve completed many experimental and academic
+              projects – the most interesting ones are presented here. I'm
+              especially interested in applying AI and Data Science to
+              real-world solutions, which is why I enjoy experimenting with new
+              frameworks, tools, and creating my own models from the ground up.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <i class="fas fa-people-group"></i>
+            <h3>How I Like to Work</h3>
+            <p>
+              I value open communication, constructive feedback, and a positive
+              atmosphere that encourages sharing knowledge and experience. I
+              enjoy collaborating within a team, but I am equally comfortable
+              working independently. I care about continuous growth, expanding
+              my skills, and bringing real value to projects, especially those
+              built with modern technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <span class="eyebrow">Projects</span>
+        <h2>Selected Work</h2>
+        <div class="grid">
+          <div class="card">
+            <div class="card-content">
+              <h3>EventManager</h3>
+              <p>
+                An event management application with a role and permission
+                system, making it easy to handle events comprehensively.
+              </p>
+              <span class="tags">MVC • .NET • SQL Server</span>
+            </div>
+            <a href="projects/eventmanager.html">View more →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>LibraryApp</h3>
+              <p>
+                A desktop library system for reservations, lending, and managing
+                the book catalog.
+              </p>
+              <span class="tags">WPF • .NET • EF Core • SQL</span>
+            </div>
+            <a href="projects/library.html">View more →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>RestaurantApp</h3>
+              <p>
+                A platform for browsing restaurants, filtering offers, and
+                booking tables with personalized recommendations.
+              </p>
+              <span class="tags">Angular • Node.js • Firebase</span>
+            </div>
+            <a href="projects/restaurant.html">View more →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Learning Tracker</h3>
+              <p>
+                An application for creating notes, generating AI-based quizzes,
+                and tracking learning progress.
+              </p>
+              <span class="tags">Angular • .NET • Cohere(AI)</span>
+            </div>
+            <a href="projects/learningtracker.html">View more →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>MockBank API</h3>
+              <p>
+                A banking simulation API: <br />accounts, transactions,
+                webhooks, and integrations.
+              </p>
+              <span class="tags">NestJS • MongoDB • JWT • Webhooks</span>
+            </div>
+            <a href="projects/mockbankapi.html">View more →</a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>MockBank UI</h3>
+              <p>
+                A modern banking interface with account management,
+                transactions, transfers, webhooks, and statistics. Built as the
+                frontend for
+                <em>MockBank API</em>.
+              </p>
+              <span class="tags">React • TypeScript • Tailwind • API</span>
+            </div>
+            <a
+              href="projects/mockbank.html"
+              class="more-link"
+              aria-label="MockBank UI – view more"
+            >
+              View more →
+            </a>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Budżetownik</h3>
+              <p>
+                A web application for managing home finances, with category
+                support, charts, and integration with MockBank API.
+              </p>
+              <span class="tags">Laravel • PHP • MySQL • Tailwind</span>
+            </div>
+            <a href="projects/budzetownik.html" class="more-link"
+              >View more →</a
+            >
+          </div>
+
+          <!-- unchanged commented-out section -->
+          <!--
+      <div class="card">
+        <div class="ribbon">Work in <br />Progress</div>
+        <div class="card-content">
+          <h3>AutoLogix</h3>
+          <p>
+            A vehicle management app for storing service history, fuel logs,
+            repairs, and reminders. Built with Clean Code principles.
+          </p>
+          <span class="tags">
+            .NET 8 • C# • ASP.NET Core • EF Core • PostgreSQL (Neon)
+          </span>
+        </div>
+        <a href="projects/autologix.html" class="more-link"
+          >View more →</a
+        >
+      </div>
+      -->
+        </div>
+      </div>
+    </section>
+
+    <section class="tech-stack">
+      <div class="container">
+        <span class="eyebrow">Technologies</span>
+        <h2>Technologies I've Worked With</h2>
+        <div class="tech-grid">
+          <span class="tech">HTML</span>
+          <span class="tech">CSS</span>
+          <span class="tech">JavaScript</span>
+          <span class="tech">TypeScript</span>
+          <span class="tech">Angular</span>
+          <span class="tech">React</span>
+          <span class="tech">C#</span>
+          <span class="tech">.NET</span>
+          <span class="tech">Entity Framework</span>
+          <span class="tech">WPF</span>
+          <span class="tech">Node.js</span>
+          <span class="tech">Express</span>
+          <span class="tech">PHP</span>
+          <span class="tech">Laravel</span>
+          <span class="tech">SQL</span>
+          <span class="tech">MongoDB</span>
+          <span class="tech">Firebase</span>
+          <span class="tech">Docker</span>
+          <span class="tech">Git</span>
+          <span class="tech">RESTful API</span>
+          <span class="tech">Python</span>
+          <span class="tech">TensorFlow</span>
+          <span class="tech">PyTorch</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section class="interests">
+      <div class="container">
+        <span class="eyebrow">hobby</span>
+        <h2>Interests</h2>
+        <div class="interest-grid">
+          <div class="interest">
+            <i class="fas fa-brain"></i>
+            <h3>Artificial Intelligence</h3>
+            <p>
+              I'm interested in neural networks, especially in image
+              classification tasks. I enjoy experimenting with different
+              frameworks, choosing tools tailored to each project. I like
+              combining AI with web applications and testing new ideas in
+              practice.
+            </p>
+          </div>
+
+          <div class="interest">
+            <i class="fas fa-cloud"></i>
+            <h3>Cloud</h3>
+            <p>
+              I'm interested in cloud technologies, particularly in data storage
+              and user authentication. I most often use Firebase, but I also
+              enjoy testing other cloud solutions to see how they can improve
+              application performance in real-world scenarios.
+            </p>
+          </div>
+
+          <div class="interest">
+            <i class="fas fa-microchip"></i>
+            <h3>Microcontrollers & Robotics</h3>
+            <p>
+              I like building simple mobile robots and programming
+              microcontrollers, mainly from the STM32 family. It's a hobby where
+              I combine coding with electronics — soldering components myself,
+              designing sensor-based circuits, and developing my own
+              constructions step by step.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer>
+      <div class="footer-container">
+        <p class="footer-name">© 2025 Marek Sigmund</p>
+        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <div class="footer-links">
+          <a href="assets/cv/CV_Marek.pdf" target="_blank">CV</a>
+          <a href="https://github.com/mareksigmund/Projekty" target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/marek-sigmund-235164357"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:m.sigmund@o2.pl">E-mail</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
