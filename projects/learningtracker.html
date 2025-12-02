@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
-    <!-- Ustawienia podstawowe -->
+    <!-- Basic settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Tytuł i opis -->
-    <title>Learning Tracker – Notatki, quizy i AI | Marek Sigmund</title>
+    <!-- Title & description -->
+    <title>Learning Tracker – Notes, Quizzes & AI | Marek Sigmund</title>
     <meta
       name="description"
-      content="Learning Tracker to aplikacja edukacyjna łącząca notatki, generowanie quizów z pomocą AI i analizę postępów nauki. Stworzona w Angular + .NET + SQL + Firebase."
+      content="Learning Tracker is an educational application combining notes, AI-generated quizzes and learning progress tracking. Built with Angular + .NET + SQL + Firebase."
     />
 
     <!-- SEO / Open Graph -->
     <meta
       property="og:title"
-      content="Learning Tracker – Notatki, quizy i AI"
+      content="Learning Tracker – Notes, Quizzes & AI"
     />
     <meta
       property="og:description"
-      content="Nowoczesna aplikacja edukacyjna, która łączy notatki, quizy i analizę postępów z pomocą sztucznej inteligencji. Projekt fullstack zbudowany w Angular i .NET."
+      content="A modern educational app that combines notes, quizzes and progress analysis powered by artificial intelligence. A full-stack project built with Angular and .NET."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -29,7 +29,7 @@
     />
     <meta property="og:image" content="../assets/icon/og-learningtracker.png" />
 
-    <!-- Favicon i ikony -->
+    <!-- Favicon & icons -->
     <link
       rel="icon"
       type="image/png"
@@ -48,7 +48,7 @@
       href="../assets/icon/ms-favicon.png"
     />
 
-    <!-- Czcionki i style -->
+    <!-- Fonts & styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -56,25 +56,23 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/style_app.css" />
 
-    <!-- Skrypt galerii -->
+    <!-- Gallery script -->
     <script defer src="../assets/js/gallery.js"></script>
 
-    <!-- Kolor motywu -->
+    <!-- Theme color -->
     <meta name="theme-color" content="#1e3a8a" />
   </head>
 
   <body>
     <section class="project-page">
       <div class="container">
-        <a href="../index.html#projects" class="back"
-          >← Powrót do strony głównej</a
-        >
+        <a href="../index.html#projects" class="back">← Back to homepage</a>
 
         <h1>Learning Tracker</h1>
         <p class="intro">
-          Nowoczesna aplikacja edukacyjna, która łączy tworzenie notatek,
-          generowanie quizów z pomocą AI lub bazy danych oraz analizę postępów w
-          oparciu o rozbudowane statystyki.
+          A modern educational application combining note-taking, AI-generated
+          or database-based quizzes, and progress tracking through detailed
+          statistics.
         </p>
 
         <ul class="tech-list">
@@ -88,130 +86,130 @@
 
         <div class="o-projekcie o-projekcie-grid">
           <div class="column">
-            <h3>Możliwości aplikacji</h3>
+            <h3>Application features</h3>
             <p>
-              <strong>Learning Tracker</strong> wspiera naukę, łącząc notatki z
-              interaktywnymi quizami. Każda notatka przypisana jest do
-              kategorii, co pozwala tworzyć pytania dopasowane do tematu.
+              <strong>Learning Tracker</strong> supports learning by combining
+              notes with interactive quizzes. Each note is assigned to a
+              specific category, enabling the creation of topic-appropriate
+              questions.
             </p>
 
             <p>
-              Dostępne są trzy tryby quizów:
-              <strong>AI</strong> (generowane z treści notatek),
-              <strong>baza danych</strong> (pytania przypisane do kategorii)
-              oraz <strong>mieszany</strong> (łączenie obu metod). Dzięki
-              integracji z <strong>Cohere</strong> każde pytanie jest unikalne.
+              Three quiz modes are available:
+              <strong>AI</strong> (generated from note content),
+              <strong>database</strong> (category-assigned questions), and
+              <strong>mixed</strong> (a combination of both). Thanks to the
+              <strong>Cohere</strong> integration, every question is unique.
             </p>
 
             <p>
-              Aplikacja umożliwia także przeglądanie i filtrowanie wszystkich
-              pytań z bazy, co pozwala uczyć się lub sprawdzać wiedzę bez
-              konieczności rozwiązywania całego testu.
+              The application also allows browsing and filtering all questions
+              stored in the database, enabling learning or self-testing without
+              completing a full quiz.
             </p>
           </div>
 
           <div class="column">
-            <h3>Technologie i architektura</h3>
+            <h3>Technologies and architecture</h3>
             <p>
-              Wyniki quizów zapisywane są w systemie i prezentowane w panelu
-              statystyk, gdzie <strong>StatsComponent</strong> wizualizuje dane
-              w formie wykresów (<strong>Chart.js</strong>), tabel i podsumowań,
-              ułatwiając analizę postępów.
+              Quiz results are saved in the system and displayed in the
+              statistics panel, where <strong>StatsComponent</strong> visualises
+              data through <strong>Chart.js</strong> charts, tables and
+              summaries, making progress tracking easier.
             </p>
             <p>
-              Aplikacja powstała w <strong>Angularze</strong> (Standalone
-              Components) z backendem w <strong>ASP.NET Core</strong>. Dane
-              przechowywane są w <strong>SQL Serverze</strong>, a
-              <strong>Firebase</strong> zapewnia uwierzytelnianie i integrację w
-              czasie rzeczywistym.
+              The application is built in <strong>Angular</strong> (Standalone
+              Components) with a <strong>ASP.NET Core</strong> backend. Data is
+              stored in <strong>SQL Server</strong>, while
+              <strong>Firebase</strong> handles authentication and real-time
+              integration.
             </p>
             <p>
-              Interfejs jest lekki, nowoczesny i dostosowany do pracy na
-              desktopach i urządzeniach mobilnych.
+              The interface is lightweight, modern and optimised for both
+              desktop and mobile use.
             </p>
           </div>
         </div>
 
-        <p class="gallery-lead">Zajrzyj do środka aplikacji</p>
+        <p class="gallery-lead">Take a look inside the app</p>
         <div class="gallery-wrapper">
           <div class="gallery-main">
             <p id="image-caption" class="image-caption">
-              Panel główny aplikacji
+              Main application panel
             </p>
             <img
               id="main-image"
               src="../assets/img/learnapp/panel_główny.png"
-              alt="Panel główny aplikacji"
+              alt="Main application panel"
             />
           </div>
           <div class="gallery-thumbnails">
             <img
               src="../assets/img/learnapp/panel_główny.png"
-              alt="Panel główny aplikacji"
+              alt="Main application panel"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/rejestracja.png"
-              alt="Formualrz rejestracji"
+              alt="Registration form"
               onclick="setMainImage(this)"
             />
 
             <img
               src="../assets/img/learnapp/logowanie.png"
-              alt="Formualrz logowania"
+              alt="Login form"
               onclick="setMainImage(this)"
             />
 
             <img
               src="../assets/img/learnapp/notatki.png"
-              alt="Lista notatek uzytkownika"
+              alt="User notes list"
               onclick="setMainImage(this)"
             />
 
             <img
               src="../assets/img/learnapp/podgląd_notatki.png"
-              alt="Podgląd wybranej notatki"
+              alt="Selected note preview"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/dodawanie_notatki.png"
-              alt="Dodawanie nowej notatki uzytkownika"
+              alt="Adding a new note"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/pytanie_quiz_ai.png"
-              alt="Quzi z wykorzystaniem AI na podstawie wybranej notatki uzytkownika"
+              alt="AI-generated quiz question based on the selected note"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/wynik_quizu_ai.png"
-              alt="Wynik rozwiązanego quizu"
+              alt="Quiz results"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/statystyki.png"
-              alt="statystyki użytkownika"
+              alt="User statistics"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/learnapp/zmiana_nicku.png"
-              alt="Zmiania wyświetlanej nazwy użytkownika"
+              alt="Changing the user display name"
               onclick="setMainImage(this)"
             />
           </div>
         </div>
         <div id="fullscreen-modal">
-          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+          <img id="fullscreen-image" src="" alt="Enlarged preview" />
         </div>
-        <p class="gallery-lead">Pomysły na rozwój:</p>
+
+        <p class="gallery-lead">Ideas for future development:</p>
         <ul class="feature-list">
-          <li>Ranking użytkowników na podstawie skuteczności</li>
-          <li>Rozbudowane quizy z pytaniami wielokrotnego wyboru</li>
-          <li>System punktów i poziomów motywacyjnych</li>
-          <li>Tryb nauki z inteligentnym powtórzeniem materiału</li>
-          <li>
-            Ulepszony interfejs z kolorami notatek i możliwością ich grupowania
-          </li>
+          <li>User ranking based on performance</li>
+          <li>Extended quizzes with multiple-choice questions</li>
+          <li>Gamified point and level system</li>
+          <li>Learning mode with intelligent spaced repetition</li>
+          <li>Enhanced interface with note colors and grouping options</li>
         </ul>
 
         <div class="project-links">
@@ -232,7 +230,7 @@
                 d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
               />
             </svg>
-            Zobacz kod na GitHub
+            View on GitHub
           </a>
         </div>
       </div>
@@ -241,7 +239,9 @@
     <footer>
       <div class="footer-container">
         <p class="footer-name">© 2025 Marek Sigmund</p>
-        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <p class="footer-tagline">
+          Created with passion and a bit of coffee ☕
+        </p>
         <div class="footer-links">
           <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
           <a href="https://github.com/mareksigmund/Projekty" target="_blank"

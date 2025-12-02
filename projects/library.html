@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
-    <!-- Ustawienia podstawowe -->
+    <!-- Basic settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Tytuł i opis -->
-    <title>LibraryApp – System biblioteczny WPF | Marek Sigmund</title>
+    <!-- Title & description -->
+    <title>LibraryApp – WPF Library System | Marek Sigmund</title>
     <meta
       name="description"
-      content="LibraryApp to aplikacja desktopowa stworzona w C# (.NET, WPF, MVVM) umożliwiająca zarządzanie książkami, rezerwacjami i użytkownikami. Zintegrowana z Google Books API."
+      content="LibraryApp is a desktop application built in C# (.NET, WPF, MVVM) enabling management of books, reservations and users. Integrated with the Google Books API."
     />
 
     <!-- SEO / Open Graph -->
-    <meta property="og:title" content="LibraryApp – System biblioteczny WPF" />
+    <meta property="og:title" content="LibraryApp – WPF Library System" />
     <meta
       property="og:description"
-      content="Kompleksowy system biblioteczny stworzony w technologii WPF z architekturą MVVM i integracją z Google Books API."
+      content="A complete library management system built using WPF with MVVM architecture and integration with the Google Books API."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -26,7 +26,7 @@
     />
     <meta property="og:image" content="../assets/icon/og-libraryapp.png" />
 
-    <!-- Favicon i ikony -->
+    <!-- Favicon & icons -->
     <link
       rel="icon"
       type="image/png"
@@ -45,7 +45,7 @@
       href="../assets/icon/ms-favicon.png"
     />
 
-    <!-- Czcionki i style -->
+    <!-- Fonts & styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -53,24 +53,22 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/style_app.css" />
 
-    <!-- Skrypt galerii -->
+    <!-- Gallery script -->
     <script defer src="../assets/js/gallery.js"></script>
 
-    <!-- Kolor motywu -->
+    <!-- Theme color -->
     <meta name="theme-color" content="#1e3a8a" />
   </head>
 
   <body>
     <section class="project-page">
       <div class="container">
-        <a href="../index.html#projects" class="back"
-          >← Powrót do strony głównej</a
-        >
+        <a href="../index.html#projects" class="back">← Back to homepage</a>
 
         <h1>LibraryApp</h1>
         <p class="intro">
-          Kompleksowy system biblioteczny wspierający proces zarządzania
-          książkami, rezerwacjami i wypożyczeniami.
+          A comprehensive library management system supporting book handling,
+          reservations and borrowings.
         </p>
 
         <ul class="tech-list">
@@ -86,119 +84,114 @@
 
         <div class="o-projekcie o-projekcie-grid">
           <div class="column">
-            <h3>Możliwości aplikacji</h3>
+            <h3>Application Features</h3>
             <p>
-              <strong>LibraryApp</strong> to aplikacja desktopowa stworzona w
-              technologii WPF, umożliwiająca kompleksowe zarządzanie procesami
-              bibliotecznymi w oparciu o system ról: <strong>Czytelnik</strong>,
-              <strong>Bibliotekarz</strong> oraz <strong>Administrator</strong>.
-              Każdy użytkownik otrzymuje dostęp do dedykowanego panelu i funkcji
-              dostosowanych do jego uprawnień, co zapewnia intuicyjną obsługę i
-              efektywne zarządzanie zasobami biblioteki.
+              <strong>LibraryApp</strong> is a desktop application built with
+              WPF that enables complete management of library operations based
+              on a role system: <strong>Reader</strong>,
+              <strong>Librarian</strong>, and <strong>Administrator</strong>.
+              Each user receives access to a dedicated panel and features
+              tailored to their permissions, ensuring intuitive operation and
+              efficient management of library resources.
             </p>
 
             <p>
-              <strong>Bibliotekarz</strong> ma możliwość wyszukiwania książek za
-              pomocą <strong>Google Books API</strong>, dodawania ich do bazy
-              (symulując proces zakupu nowych pozycji) oraz zarządzania ich
-              statusem — w tym wypożyczeniami, zwrotami, rezerwacjami i
-              oznaczaniem egzemplarzy jako zagubione.
-              <strong>Czytelnicy</strong> mogą przeglądać katalog, rezerwować
-              wybrane pozycje oraz wypożyczać książki udostępnione przez
-              bibliotekę. System automatycznie wysyła powiadomienia o
-              zbliżającym się terminie zwrotu oraz informuje o zatwierdzeniu
-              rezerwacji.
+              The <strong>Librarian</strong> can search for books using the
+              <strong>Google Books API</strong>, add them to the database
+              (simulating the purchase of new items), and manage their status —
+              including loans, returns, reservations, and marking copies as
+              lost. <strong>Readers</strong> can browse the catalog, reserve
+              selected books, and borrow available titles. The system
+              automatically sends notifications about upcoming return deadlines
+              and informs users when their reservations are approved.
             </p>
           </div>
           <div class="column">
-            <h3>Technologie i architektura</h3>
+            <h3>Technologies & Architecture</h3>
             <p>
-              Aplikacja została opracowana w technologii <strong>WPF</strong> z
-              zastosowaniem architektury <strong>MVVM</strong>, która zapewnia
-              rozdzielenie logiki biznesowej od warstwy prezentacji. Dzięki temu
-              kod jest łatwiejszy w utrzymaniu oraz podatny na dalszą rozbudowę
-              o nowe funkcje. Warstwa danych została oparta na
-              <strong>SQL Server</strong>, a do komunikacji z nią wykorzystano
-              <strong>Entity Framework</strong>, umożliwiający wygodne mapowanie
-              obiektowo-relacyjne oraz minimalizujący potrzebę pisania
-              skomplikowanych zapytań SQL.
+              The application was built using <strong>WPF</strong> and the
+              <strong>MVVM</strong> architecture, which separates business logic
+              from the presentation layer. This makes the codebase easier to
+              maintain and more adaptable for further feature development. The
+              data layer is based on <strong>SQL Server</strong>, and
+              <strong>Entity Framework</strong> is used for communication,
+              enabling convenient object-relational mapping and reducing the
+              need to write complex SQL queries.
             </p>
 
             <p>
-              Kluczowym elementem projektu jest integracja z
-              <strong>Google Books API</strong>, która pozwala na szybkie
-              wyszukiwanie i automatyczne uzupełnianie informacji o książkach.
-              Dzięki temu bibliotekarze mogą w prosty sposób rozbudowywać
-              katalog o nowe pozycje, a użytkownicy zyskują dostęp do dokładnych
-              i aktualnych danych. Aplikacja została zaprojektowana w sposób
-              modułowy, co pozwala na jej elastyczne dopasowanie do potrzeb
-              różnych typów bibliotek z możliwością wdrażania dodatkowych
-              modułów.
+              A key part of the project is the integration with the
+              <strong>Google Books API</strong>, which allows for fast searching
+              and automatic filling of book information. This enables librarians
+              to easily expand the catalog with new items, while users gain
+              access to accurate and up-to-date data. The application was
+              designed in a modular way, making it flexible and adaptable to
+              different types of libraries, with the option to introduce
+              additional modules in the future.
             </p>
           </div>
         </div>
 
-        <p class="gallery-lead">Zajrzyj do środka aplikacji</p>
+        <p class="gallery-lead">Take a look inside the application</p>
         <div class="gallery-wrapper">
           <div class="gallery-main">
-            <p id="image-caption" class="image-caption">
-              Panel główny bibliotekarza
-            </p>
+            <p id="image-caption" class="image-caption">Librarian main panel</p>
             <img
               id="main-image"
               src="../assets/img/libapp/bibl_panel_glowny.png"
-              alt="Panel główny"
+              alt="Main panel"
             />
           </div>
           <div class="gallery-thumbnails">
             <img
               src="../assets/img/libapp/bibl_panel_glowny.png"
-              alt="Panel główny"
+              alt="Main panel"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/libapp/bibl_ksiegarnia_i_dodanie.png"
-              alt="Księgarnia i dodanie książki do biblioteki"
+              alt="Bookstore view and adding a book to the library"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/libapp/bibl_zarzadzanie_ksiazkami.png"
-              alt="Zarządzanie książkami przez bibliotekarza"
+              alt="Book management by the librarian"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/libapp/bibl_wyporzyczenia_zwrot_rezerwacja.png"
-              alt="Widok bibliotekarza dla wypożyczenia, zwrotu i rezerwacji książek"
+              alt="Librarian view for loans, returns and reservations"
               onclick="setMainImage(this)"
             />
 
             <img
               src="../assets/img/libapp/admin_tworzenie_bibliotekarza.png"
-              alt="Widok administratora do tworzenia kont bibliotekarzy"
+              alt="Administrator panel for creating librarian accounts"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/libapp/user_panel.png"
-              alt="Panel użytkownika"
+              alt="User panel"
               onclick="setMainImage(this)"
             />
             <img
               src="../assets/img/libapp/user_rezerwacje_wyporzyczenia.png"
-              alt="Widok użytkownika dla rezerwacji i wypożyczeń"
+              alt="User view for reservations and loans"
               onclick="setMainImage(this)"
             />
           </div>
         </div>
+
         <div id="fullscreen-modal">
-          <img id="fullscreen-image" src="" alt="Podgląd powiększony" />
+          <img id="fullscreen-image" src="" alt="Fullscreen preview" />
         </div>
 
-        <p class="gallery-lead">Kolejne aktualizacjie:</p>
+        <p class="gallery-lead">Upcoming updates:</p>
         <ul class="feature-list">
-          <li>Powiadomienia e-mail o zbliżającym się terminie zwrotu</li>
-          <li>Oceny i komentarze użytkowników</li>
-          <li>Eksport historii użytkownika do PDF</li>
-          <li>Rozszerzony system ról i uprawnień</li>
+          <li>Email notifications for upcoming return deadlines</li>
+          <li>User ratings and comments</li>
+          <li>Export user history to PDF</li>
+          <li>Extended role and permission system</li>
         </ul>
 
         <div class="project-links">
@@ -219,7 +212,7 @@
                 d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
               />
             </svg>
-            Zobacz kod na GitHub
+            View code on GitHub
           </a>
         </div>
       </div>
@@ -228,7 +221,9 @@
     <footer>
       <div class="footer-container">
         <p class="footer-name">© 2025 Marek Sigmund</p>
-        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <p class="footer-tagline">
+          Created with passion and a bit of coffee ☕
+        </p>
         <div class="footer-links">
           <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
           <a href="https://github.com/mareksigmund/Projekty" target="_blank"

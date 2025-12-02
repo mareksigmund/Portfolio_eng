@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
-    <!-- Ustawienia podstawowe -->
+    <!-- Basic settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Tytuł i opis -->
+    <!-- Title & description -->
     <title>MockBank API – NestJS + MongoDB Sandbox | Marek Sigmund</title>
     <meta
       name="description"
-      content="MockBank API to serwis bankowy typu sandbox zbudowany w NestJS + MongoDB. Obsługuje konta, transakcje, webhooki HMAC i integracje z zewnętrznymi aplikacjami (m.in. Budżetownik)."
+      content="MockBank API is a banking sandbox service built with NestJS + MongoDB. It supports accounts, transactions, HMAC webhooks, and integrations with external applications (including Budżetownik)."
     />
 
     <!-- SEO / Open Graph -->
@@ -20,7 +20,7 @@
     />
     <meta
       property="og:description"
-      content="Serwis bankowy typu sandbox do testowania integracji. Zbudowany w NestJS + MongoDB z obsługą webhooków HMAC, JWT i Docker wdrożeniem na Render."
+      content="A sandbox banking service for integration testing. Built with NestJS + MongoDB, featuring HMAC webhooks, JWT, and a Docker deployment on Render."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -29,7 +29,7 @@
     />
     <meta property="og:image" content="../assets/icon/og-mockbankapi.png" />
 
-    <!-- Favicon i ikony -->
+    <!-- Favicon & icons -->
     <link
       rel="icon"
       type="image/png"
@@ -48,7 +48,7 @@
       href="../assets/icon/ms-favicon.png"
     />
 
-    <!-- Czcionki i style -->
+    <!-- Fonts & styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
@@ -56,104 +56,102 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/style_app.css" />
 
-    <!-- Kolor motywu -->
+    <!-- Theme color -->
     <meta name="theme-color" content="#1e3a8a" />
   </head>
 
   <body>
     <section class="project-page">
       <div class="container">
-        <a href="../index.html#projects" class="back"
-          >← Powrót do strony głównej</a
-        >
+        <a href="../index.html#projects" class="back">← Back to homepage</a>
 
         <h1>MockBank API</h1>
+
         <p class="intro">
-          Serwis bankowy typu <em>mock</em> zbudowany w
-          <strong>NestJS</strong> + <strong>MongoDB</strong>. Służy do symulacji
-          kont i transakcji oraz integracji z systemami zewnętrznymi <br />(np.
-          <a href="budzetownik.html">Budżetownik</a>). Wdrożony na
-          <strong>Render</strong>, gotowy do testów integracyjnych i
-          automatycznej synchronizacji.
+          A <em>mock</em> banking service built with <strong>NestJS</strong> +
+          <strong>MongoDB</strong>. It simulates accounts, transactions, and
+          integrates with external systems <br />(e.g.
+          <a href="budzetownik.html">Budżetownik</a>). Deployed on
+          <strong>Render</strong>, ready for integration testing and automatic
+          synchronization.
         </p>
 
-        <ul class="tech-list" aria-label="Wykorzystane technologie">
+        <ul class="tech-list" aria-label="Technologies used">
           <li>NestJS (TypeScript)</li>
           <li>MongoDB (Mongoose)</li>
           <li>JWT (Access/Refresh)</li>
-          <li>Webhooki</li>
+          <li>Webhooks</li>
           <li>Docker &amp; Render</li>
         </ul>
 
-        <!-- Co potrafi / Architektura -->
+        <!-- Features / Architecture -->
         <div class="o-projekcie o-projekcie-grid">
           <div class="column">
-            <h3>Co potrafi MockBank</h3>
+            <h3>What MockBank Can Do</h3>
             <p>
-              <strong>MockBank</strong> to nowoczesne, sandboxowe
-              <strong>API bankowe</strong> stworzone w technologii
-              <strong>NestJS</strong>, które pozwala symulować rzeczywiste
-              operacje finansowe — od rejestracji użytkowników i zakładania kont
-              po pełną obsługę transakcji i integrację z zewnętrznymi
-              aplikacjami.
+              <strong>MockBank</strong> is a modern sandbox
+              <strong>banking API</strong> built with <strong>NestJS</strong>.
+              It allows simulating real financial operations — from user
+              registration and account creation to full transaction handling and
+              integrations with external applications.
             </p>
 
             <p>
-              System umożliwia <strong>tworzenie wielu kont</strong> z
-              niezależnym saldem, <strong>symulowanie transakcji</strong> z
-              automatyczną aktualizacją oraz <strong>podgląd historii</strong> i
-              salda w czasie rzeczywistym. Dane zwracane są w ujednoliconym
-              formacie, co ułatwia testy i analizę.
+              The system supports
+              <strong>creating multiple accounts</strong> with independent
+              balances, <strong>simulating transactions</strong> with automatic
+              updates, and viewing
+              <strong>real-time balances and history</strong>. All returned data
+              follows a unified format, making testing and analysis easier.
             </p>
 
             <p>
-              MockBank obsługuje <strong>integracje dwukierunkowe</strong>
-              <em>push</em> (webhooki podpisywane
-              <strong>HMAC-SHA256</strong> dla natychmiastowych powiadomień)
-              oraz <em>pull</em> (endpointy REST do cyklicznej synchronizacji
-              danych). Całość uzupełniają wbudowane
-              <strong>mechanizmy bezpieczeństwa</strong> i stabilności:
-              <code>/healthz</code>, <code>/readyz</code>, walidacja
-              <strong>DTO</strong>, <strong>rate limiting</strong>,
-              <strong>CORS</strong> oraz nagłówki ochronne (<em>Helmet</em>),
-              które zapewniają przewidywalne działanie środowiska testowego.
+              MockBank supports <strong>two-way integrations</strong>:
+              <em>push</em> (webhooks signed with
+              <strong>HMAC-SHA256</strong> for instant notifications) and
+              <em>pull</em> (REST endpoints for periodic data synchronization).
+              The system is complemented by built-in
+              <strong>security and stability mechanisms</strong>:
+              <code>/healthz</code>, <code>/readyz</code>, strict validation of
+              <strong>DTOs</strong>, <strong>rate limiting</strong>,
+              <strong>CORS</strong>, and security headers (<em>Helmet</em>),
+              ensuring predictable behavior in test environments.
             </p>
           </div>
 
           <div class="column">
-            <h3>Architektura i bezpieczeństwo</h3>
+            <h3>Architecture & Security</h3>
             <p>
-              Projekt opiera się na
-              <strong>modularnej architekturze</strong> osobne moduły
-              <code>auth</code>, <code>accounts</code>,
+              The project is based on a <strong>modular architecture</strong> —
+              separate modules such as <code>auth</code>, <code>accounts</code>,
               <code>transactions</code>, <code>webhooks</code>,
-              <code>integrations</code> i <code>system</code> odpowiadają za
-              jasno wydzielone obszary logiki, co ułatwia utrzymanie i rozwój.
-              Uwierzytelnianie oparte jest o <strong>JWT</strong>, a hasła
-              zabezpieczane są przy użyciu <strong>argon2</strong>. Sekrety
-              webhooków szyfrowane są algorytmem <strong>AES</strong>, a
-              wszystkie powiadomienia podpisywane <strong>HMAC-SHA256</strong> w
-              nagłówkach, co gwarantuje integralność i autentyczność danych.
+              <code>integrations</code>, and <code>system</code> handle clearly
+              defined areas of logic, improving maintainability and scalability.
+              Authentication uses <strong>JWT</strong>, passwords are secured
+              with <strong>argon2</strong>, webhook secrets are encrypted using
+              <strong>AES</strong>, and all notifications are signed with
+              <strong>HMAC-SHA256</strong> in the headers, ensuring data
+              integrity and authenticity.
             </p>
 
             <p>
-              Publiczny endpoint integracyjny jest chroniony przez
-              <strong>API-key</strong> w nagłówku Bearer, co umożliwia
-              testowanie integracji bez konieczności zarządzania tokenami
-              użytkowników. Cała architektura została zaprojektowana z myślą o
-              <strong>modularności</strong>,
-              <strong>separacji odpowiedzialności</strong> i
-              <strong>łatwym rozszerzaniu</strong> o kolejne usługi (np.
-              płatności, multiwaluty, logi bezpieczeństwa), dzięki czemu projekt
-              pozostaje <strong>elastyczny, bezpieczny i skalowalny</strong>.
+              The public integration endpoint is protected by an
+              <strong>API key</strong> in the Bearer header, which allows
+              external systems to test integrations without managing user
+              tokens. The entire architecture is designed around
+              <strong>modularity</strong>,
+              <strong>separation of concerns</strong>, and
+              <strong>easy extensibility</strong> (e.g. payments,
+              multi-currency, security logs). Thanks to this, the project
+              remains <strong>flexible, secure, and scalable</strong>.
             </p>
           </div>
         </div>
 
         <div class="endpoints-grid">
-          <!-- LEWA KARTA -->
+          <!-- LEFT CARD -->
           <div class="endpoints-card">
-            <h3>Endpointy – core</h3>
+            <h3>Endpoints – core</h3>
 
             <div class="ep-group">
               <h4>Auth</h4>
@@ -170,7 +168,7 @@
             </div>
 
             <div class="ep-group">
-              <h4>Konta</h4>
+              <h4>Accounts</h4>
               <div class="ep">
                 <span class="verb get">GET</span><code>/v1/accounts</code>
               </div>
@@ -180,12 +178,14 @@
               <div class="ep">
                 <span class="verb post">POST</span>
                 <code>/v1/accounts/:id/close</code>
-                <span class="note">saldo=0, potwierdzenie nazwą i hasłem</span>
+                <span class="note"
+                  >balance=0, confirmation with name and password</span
+                >
               </div>
             </div>
 
             <div class="ep-group">
-              <h4>Transakcje</h4>
+              <h4>Transactions</h4>
               <div class="ep">
                 <span class="verb get">GET</span>
                 <code
@@ -195,21 +195,23 @@
               <div class="ep">
                 <span class="verb post">POST</span>
                 <code>/v1/simulations/transaction</code>
-                <span class="note">tworzy wpis i aktualizuje saldo</span>
+                <span class="note"
+                  >creates an entry and updates the balance</span
+                >
               </div>
             </div>
           </div>
 
-          <!-- PRAWA KARTA -->
+          <!-- RIGHT CARD -->
           <div class="endpoints-card">
-            <h3>Endpointy – integracje</h3>
+            <h3>Endpoints – integrations</h3>
 
             <div class="ep-group">
-              <h4>Webhooki (push)</h4>
+              <h4>Webhooks (push)</h4>
               <div class="ep">
                 <span class="verb post">POST</span><code>/v1/webhooks</code
                 ><span class="note"
-                  >rejestracja: url, secret, events[], clientId</span
+                  >registration: url, secret, events[], clientId</span
                 >
               </div>
               <div class="ep">
@@ -217,9 +219,8 @@
                 ><code>/v1/webhooks?clientId=...</code>
               </div>
               <div class="ep stacked">
-                <span class="label">Zdarzenie</span
-                ><code>transaction.created</code>
-                <span class="label">Nagłówki</span>
+                <span class="label">Event</span><code>transaction.created</code>
+                <span class="label">Headers</span>
                 <code>X-MockBank-Timestamp</code
                 ><code>X-MockBank-Idempotency-Key</code
                 ><code>X-MockBank-Signature</code>
@@ -240,16 +241,17 @@
               </div>
               <div class="ep">
                 <span class="label">owner</span><code>ObjectId</code
-                ><code>pełny e-mail</code><code>prefiks e-mail (user+coś)</code>
+                ><code>full e-mail</code
+                ><code>email prefix (user+something)</code>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Format danych -->
+        <!-- Data format -->
         <div class="data-format">
           <div class="data-card">
-            <h3>Transakcje</h3>
+            <h3>Transactions</h3>
             <pre><code>{
   "id": "652123…",
   "externalTxnId": "tx_abcd1234",
@@ -257,41 +259,43 @@
   "amount": -1299,            
   "currency": "PLN",
   "date": "2025-10-05T18:41:00.000Z",
-  "description": "Testowa transakcja",
+  "description": "Test transaction",
   "raw": { "source": "simulator" }
 }</code></pre>
+
             <p>
-              Dane transakcji zwracane są w
-              <strong>spójnym formacie JSON</strong> — kwoty w groszach (typ
-              <code>int</code>), daty w standardzie
-              <strong>ISO-8601 (UTC)</strong>. Aktualnie obsługiwana jest tylko
-              waluta <strong>PLN</strong>, a struktura danych jest gotowa na
-              rozszerzenie o inne waluty w przyszłych wersjach.
+              Transaction data is returned in a
+              <strong>consistent JSON format</strong> — amounts in cents (type
+              <code>int</code>), dates in <strong>ISO-8601 (UTC)</strong>.
+              Currently, only <strong>PLN</strong> is supported, but the
+              structure is prepared for multi-currency support in future
+              versions.
             </p>
+
             <p class="note">
-              Wszystkie endpointy zwracają również spójny kontrakt błędów (JSON
-              z <code>traceId</code>, <code>code</code>, <code>message</code>),
-              co ułatwia integrację i testowanie.
+              All endpoints also return a unified error contract (JSON with
+              <code>traceId</code>, <code>code</code>, <code>message</code>),
+              which simplifies integration and testing.
             </p>
           </div>
         </div>
 
-        <!-- Deployment (zwięźle) -->
+        <!-- Deployment (short) -->
 
         <div class="env-card single">
-          <h3>Uruchomienie w skrócie</h3>
+          <h3>Deployment Summary</h3>
           <ul class="pill-list">
-            <li>Docker (kontener)</li>
-            <li>Render (hosting produkcyjny)</li>
-            <li>Health-checki: /healthz • /readyz</li>
+            <li>Docker (container)</li>
+            <li>Render (production hosting)</li>
+            <li>Health checks: /healthz • /readyz</li>
           </ul>
           <p class="muted">
-            Projekt gotowy do rozbudowy i dostosowań na potrzeby innych
-            aplikacji.
+            The project is ready for expansion and customization for other
+            applications.
           </p>
         </div>
 
-        <!-- Linki -->
+        <!-- Links -->
         <div class="project-links">
           <a
             href="https://github.com/mareksigmund/Projekty/tree/main/MockBankAPI"
@@ -311,7 +315,7 @@
                 d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
               />
             </svg>
-            Zobacz kod na GitHub
+            View code on GitHub
           </a>
 
           <a
@@ -319,18 +323,18 @@
             target="_blank"
             rel="noopener"
             class="btn secondary"
-            title="Uruchamia publiczne API – przy pierwszym wywołaniu może potrwać dłużej (Render free)."
+            title="Starts the public API — first call may take longer (Render free plan)."
           >
             🌐 Demo /healthz
           </a>
         </div>
 
-        <!-- Notka o Renderze -->
+        <!-- Note about Render -->
         <p class="note-warn">
-          <strong>Uwaga:</strong> API działa na darmowym planie <em>Render</em>,
-          więc po bezczynności serwis może się „uśpić”. Kliknięcie
-          <em>Demo – /healthz</em> wybudza instancję — pierwszy response może
-          potrwać nieco dłużej.
+          <strong>Note:</strong> The API runs on the free <em>Render</em> plan,
+          so after inactivity the service may enter “sleep mode”. Clicking
+          <em>Demo – /healthz</em> wakes up the instance — the first response
+          may take a bit longer.
         </p>
       </div>
     </section>
@@ -338,7 +342,9 @@
     <footer>
       <div class="footer-container">
         <p class="footer-name">© 2025 Marek Sigmund</p>
-        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <p class="footer-tagline">
+          Created with passion and a bit of coffee ☕
+        </p>
         <div class="footer-links">
           <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
           <a href="https://github.com/mareksigmund/Projekty" target="_blank"
