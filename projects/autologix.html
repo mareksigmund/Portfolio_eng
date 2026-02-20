@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
   <head>
-    <!-- Ustawienia podstawowe -->
+    <!-- Basic settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- Tytuł i opis -->
+    <!-- Title & description -->
     <title>
-      AutoLogix – System motoryzacyjny (Work in Progress) | Marek Sigmund
+      AutoLogix – Vehicle, Service & Insurance Management | Marek Sigmund
     </title>
     <meta
       name="description"
-      content="AutoLogix to rozwijany system webowy do zarządzania pojazdami, serwisami, tankowaniami i przypomnieniami. Projekt w toku – zbudowany w .NET + Angular, oparty o architekturę Clean Code."
+      content="AutoLogix is a web app for managing vehicles, service history and insurance-related workflows. Angular UI + ASP.NET Core Web API (DDD), PostgreSQL (Neon), JWT and role-based authorization."
     />
 
     <!-- SEO / Open Graph -->
     <meta
       property="og:title"
-      content="AutoLogix – System motoryzacyjny (Work in Progress)"
+      content="AutoLogix – Vehicle, Service & Insurance Management"
     />
     <meta
       property="og:description"
-      content="Nowoczesna aplikacja motoryzacyjna w budowie – zarządzanie pojazdami, serwisami i tankowaniami. Projekt .NET + Angular tworzony w duchu Clean Code."
+      content="Fullstack system: vehicle profile, service history, policy alerts and an insurance offer workflow. Angular + .NET (DDD) + PostgreSQL."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -31,7 +31,7 @@
     />
     <meta property="og:image" content="../assets/icon/og-autologix.png" />
 
-    <!-- Favicon i ikony -->
+    <!-- Favicon & icons -->
     <link
       rel="icon"
       type="image/png"
@@ -50,180 +50,372 @@
       href="../assets/icon/ms-favicon.png"
     />
 
-    <!-- Czcionki i style -->
+    <!-- Fonts & styles -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/style_app.css" />
-    <link rel="stylesheet" href="../assets/css/tmp.css" />
 
-    <!-- Skrypt galerii -->
+    <!-- Gallery script -->
     <script defer src="../assets/js/gallery.js"></script>
 
-    <!-- Kolor motywu -->
+    <!-- Theme color -->
     <meta name="theme-color" content="#1e3a8a" />
   </head>
 
   <body>
     <section class="project-page">
       <div class="container">
-        <a href="../index.html#projects" class="back"
-          >← Powrót do strony głównej</a
-        >
+        <a href="../index.html#projects" class="back">← Back to home</a>
 
         <h1>AutoLogix</h1>
-        <p class="intro">
-          AutoLogix to aplikacja motoryzacyjna pozwalająca prowadzić dziennik
-          serwisowy i ewidencję tankowań dla wielu pojazdów. Projekt rozwijany
-          jest etapowo w oparciu o ASP.NET Core, Entity Framework Core oraz bazę
-          PostgreSQL.
-        </p>
+        <div class="intro">
+          <p>
+            <strong>AutoLogix</strong> is a vehicle management system: car
+            profile, service history and insurance-related workflows in one
+            place. The app is multi-role: the owner, service technician and
+            insurer each have different views and permissions.
+          </p>
 
-        <div class="wip-banner">
-          <span class="wip-dot"></span>
-          Status: w trakcie rozwoju. Poniżej aktualny zakres i kolejne etapy.
+          <p class="muted">
+            The backend is <strong>ASP.NET Core Web API</strong> built with
+            <strong>DDD</strong>, using <strong>JWT</strong> and ownership-based
+            access control (a user operates only on their own vehicles and
+            entries).
+          </p>
         </div>
 
-        <ul class="tech-list">
-          <li>.NET / ASP.NET Core (Minimal API)</li>
-          <li>C#</li>
-          <li>Entity Framework Core</li>
-          <li>PostgreSQL (Neon)</li>
-          <li>JWT Auth</li>
+        <ul class="tech-list" aria-label="Technologies used">
+          <li>Angular</li>
+          <li>.NET</li>
+          <li>ASP.NET Core Web API</li>
+          <li>EF Core</li>
+          <li>PostgreSQL</li>
+          <li>JWT + role-based authorization</li>
+          <li>DDD (Domain / Application / Infrastructure / Api)</li>
         </ul>
 
-        <div class="o-projekcie o-projekcie-grid">
+        <div class="o-projekcie o-projekcie-grid ui-plain">
           <div class="column">
-            <h3>Cel aplikacji</h3>
+            <h3>What the app can do</h3>
             <p>
-              <strong>AutoLogix</strong> ma umożliwiać użytkownikowi prowadzenie
-              pełnej historii eksploatacyjnej pojazdu: przeglądy, wymiany,
-              naprawy, tankowania, planowane działania. Każdy wpis może być
-              powiązany z konkretnym przebiegiem oraz kosztem.
+              <strong>AutoLogix</strong> combines technical vehicle data, repair
+              and inspection history, and insurance logic into a consistent
+              “vehicle profile”. The system was designed with real business
+              scenarios in mind — clear role separation, permission control and
+              a predictable API.
             </p>
-            <p>
-              System zakłada obsługę wielu pojazdów na jednym koncie oraz
-              przechowywanie danych osobno dla każdego użytkownika.
-            </p>
+            <ul class="list-plain">
+              <li>User registration and login (JWT Bearer).</li>
+              <li>Vehicle CRUD: list, details, create, edit and delete.</li>
+              <li>
+                Service history within the vehicle context (nested routing,
+                pagination).
+              </li>
+              <li>
+                OC/AC policy expiry alerts and action availability windows.
+              </li>
+              <li>
+                Insurance workflow: request an offer → insurer offer →
+                accept/reject.
+              </li>
+              <li>
+                Role-based UI: views and actions based on role (User / Service /
+                Insurer / Admin).
+              </li>
+            </ul>
           </div>
+
           <div class="column">
-            <h3>Technologie i architektura</h3>
+            <h3>Architecture & security</h3>
             <p>
-              Backend tworzony jest w <strong>ASP.NET Core (.NET 8)</strong>
-              z wykorzystaniem podejścia
-              <strong>Vertical Slice / CQRS-lite</strong> – każda funkcja (np.
-              dodanie pojazdu, dodanie wpisu serwisowego, dodanie tankowania)
-              jest osobnym fragmentem aplikacji z własną walidacją.
+              The backend was designed using DDD with clear separation of
+              responsibilities between layers. Controllers return
+              <strong>DTOs</strong> mapped manually, and the security logic is
+              based on the JWT user context (claim <code>userId</code>) and the
+              “ownership” rule.
             </p>
-            <p>
-              Warstwa danych opiera się o <strong>EF Core</strong> i bazę
-              <strong>PostgreSQL</strong> (Neon), co pozwala łatwo wdrożyć
-              aplikację w środowisku darmowym / chmurowym. Uwierzytelnianie jest
-              realizowane z użyciem <strong>JWT</strong>.
-            </p>
+
+            <ul class="list-plain">
+              <li>
+                <strong>JWT Bearer</strong> – every private endpoint requires
+                the header <code>Authorization: Bearer &lt;token&gt;</code>.
+              </li>
+              <li>
+                <strong>Data ownership</strong> – a user can view/modify only
+                their own vehicles, and service entries are accessible only via
+                the user’s vehicles.
+              </li>
+              <li><strong>Nested routing</strong> for service history</li>
+              <li>
+                <strong>Pagination</strong> on lists (vehicles and services) +
+                consistent HTTP status codes.
+              </li>
+              <li>
+                Production configuration via
+                <strong>environment variables</strong>
+                (JWT secrets, connection string), prepared for deployment.
+              </li>
+            </ul>
           </div>
         </div>
 
-        <p class="intro">
-          Kolejne kroki rozwoju aplikacji. Statusy będą aktualizowane wraz z
-          postępem prac.
-        </p>
+        <!-- Mini "highlights" section -->
+        <div class="env-card single">
+          <h3>What makes AutoLogix stand out</h3>
 
-        <div class="roadmap">
-          <div class="roadmap-item done">
-            <h3>1. Model domenowy</h3>
-            <p>
-              Ustalenie podstawowych encji: użytkownik, pojazd, wpis serwisowy,
-              tankowanie, przypomnienie. Powiązania: użytkownik → wiele pojazdów
-              → wiele wpisów.
-            </p>
-            <span class="status">Zrobione</span>
-          </div>
+          <ul class="pill-list">
+            <li>DDD architecture with clear layer separation</li>
+            <li>Multi-role access logic (User / Service / Insurer / Admin)</li>
+            <li>Ownership validation (vehicle → user)</li>
+            <li>REST API with pagination and nested routing</li>
+            <li>Consistent response contract and stable HTTP status codes</li>
+          </ul>
 
-          <div class="roadmap-item in-progress">
-            <h3>2. Szkielet aplikacji (.NET 8)</h3>
-            <p>
-              Rozdzielenie na projekty (Api, Application, Domain,
-              Infrastructure), konfiguracja EF Core i Swaggera, przygotowanie
-              pod zewnętrzną bazę.
-            </p>
-            <span class="status">Zrobione</span>
-          </div>
-
-          <div class="roadmap-item in-progress">
-            <h3>3. Uwierzytelnianie</h3>
-            <p>
-              Rejestracja i logowanie z wykorzystaniem JWT. Przypisanie zasobów
-              do bieżącego użytkownika.
-            </p>
-            <span class="status">W toku</span>
-          </div>
-
-          <div class="roadmap-item todo">
-            <h3>4. Moduł pojazdów</h3>
-            <p>
-              Funkcje: dodawanie, edycja, usuwanie i lista pojazdów; walidacja
-              podstawowych pól; paginacja.
-            </p>
-            <span class="status">Do zrobienia</span>
-          </div>
-
-          <div class="roadmap-item todo">
-            <h3>5. Moduł serwisów</h3>
-            <p>
-              Dodawanie wpisów serwisowych (data, przebieg, koszt, typ),
-              przegląd wpisów dla wybranego pojazdu, sumowanie kosztów.
-            </p>
-            <span class="status">Do zrobienia</span>
-          </div>
-
-          <div class="roadmap-item todo">
-            <h3>6. Moduł tankowań</h3>
-            <p>
-              Rejestrowanie tankowań wraz z przebiegiem i ceną paliwa;
-              wyliczanie średniego spalania i kosztu przejazdu.
-            </p>
-            <span class="status">Do zrobienia</span>
-          </div>
-
-          <div class="roadmap-item planned">
-            <h3>7. Przypomnienia</h3>
-            <p>
-              Definiowanie przypomnień po dacie i/lub przebiegu oraz oznaczanie
-              ich jako wykonane.
-            </p>
-            <span class="status">Planowane</span>
-          </div>
-
-          <div class="roadmap-item planned">
-            <h3>8. Wdrożenie</h3>
-            <p>
-              Publikacja aplikacji na darmowym hostingu oraz podłączenie bazy
-              PostgreSQL w chmurze.
-            </p>
-            <span class="status">Planowane</span>
-          </div>
+          <p class="muted">
+            The project was designed as a consistent business system with a
+            focus on access control, API predictability and future growth
+            without breaking the domain structure.
+          </p>
         </div>
 
-        <p class="gallery-lead">Dalszy rozwój</p>
-        <ul class="feature-list">
-          <li>Widok podsumowania kosztów dla wybranego pojazdu</li>
-          <li>Eksport danych (CSV / PDF)</li>
-          <li>Obsługa kilku użytkowników w ramach jednego pojazdu</li>
-          <li>Dodanie funkcji dla mechaników</li>
-        </ul>
-        <p class="gallery-lead">
-          Repozytorium zostanie upublicznione po zakończeniu etapu
-          uwierzytelniania
-        </p>
+        <!-- Gallery -->
+        <p class="gallery-lead">Take a look inside the app</p>
+        <div class="gallery-wrapper">
+          <div class="gallery-main">
+            <p id="image-caption" class="image-caption">Login screen</p>
+            <img
+              id="main-image"
+              src="../assets/img/autologix/login.png"
+              alt="Login screen"
+            />
+          </div>
 
-        <div class="project-links">
+          <div class="gallery-thumbnails">
+            <!-- Auth -->
+            <img
+              src="../assets/img/autologix/login.png"
+              alt="Login screen"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/autologix/regsiter.png"
+              alt="Account registration screen"
+              onclick="setMainImage(this)"
+            />
+
+            <!-- User dashboard -->
+            <img
+              src="../assets/img/autologix/user_panel.png"
+              alt="User dashboard"
+              onclick="setMainImage(this)"
+            />
+
+            <!-- Vehicles -->
+            <img
+              src="../assets/img/autologix/lista_pojazdow_uzytkownika.png"
+              alt="User vehicles list"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/autologix/dodawanie_pojazdu_1.png"
+              alt="Add vehicle form (basic details)"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/autologix/dodawanie_pojazdu_2.png"
+              alt="Add vehicle form (additional details)"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/autologix/szczegoly_pojazdu_swiezo_dodanego.png"
+              alt="Vehicle details (user view)"
+              onclick="setMainImage(this)"
+            />
+
+            <!-- Insurance: requests & offers -->
+            <img
+              src="../assets/img/autologix/prosba_o_oferte_ubezpieczeniowa.png"
+              alt="New insurance offer request form"
+              onclick="setMainImage(this)"
+            />
+            <img
+              src="../assets/img/autologix/lista_otwartych_prosb_o_ubezpeiczenie_danego_uzytkownika.png"
+              alt="User insurance offer requests list"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/lista_ofert_ubezepiczyciela.png"
+              alt="Insurance offers list (user view)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/lista_konczacych_sie_ubezepcizen_w_danym_oknie_czasowym.png"
+              alt="Expiring insurance policies (selected time window)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/panel_ubezpeiczyciela.png"
+              alt="Insurer dashboard"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/lista_prosb_o_oferte.png"
+              alt="Offer requests list (insurer view)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/szczegoly_pojazdu_widok_ubezepeiczyciela.png"
+              alt="Vehicle details (insurer view)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/wsytawianie_oferty_ubezepiczenia.png"
+              alt="Create insurance offer form"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/panel_serwisanta.png"
+              alt="Service dashboard (vehicle search)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/dodanie_wpisu_serwisowego.png"
+              alt="Add service entry form (basic details)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/dodanie_wpisu_serwisowego_opcjonalne_informacje.png"
+              alt="Add service entry form (optional details)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/widok_wpisow_serwisowych_danego_pojazdu_przez_sewisanta.png"
+              alt="Vehicle service entries list (service view)"
+              onclick="setMainImage(this)"
+            />
+
+            <img
+              src="../assets/img/autologix/szczegoly_pojazdu_po_dzialaniach_serwisanta_i_ubezepiczyciela.png"
+              alt="Vehicle details after service & insurer updates"
+              onclick="setMainImage(this)"
+            />
+          </div>
+        </div>
+        <div id="fullscreen-modal">
+          <img id="fullscreen-image" src="" alt="Fullscreen preview" />
+        </div>
+
+        <!-- Demo -->
+        <div class="demo-note">
+          <h3>Online demo</h3>
+          <p class="muted small" style="margin-top: 12px; margin-bottom: 12px">
+            <strong>Test accounts:</strong> you can sign in with the demo
+            accounts or create <strong>your own user account</strong>.
+            Registration applies only to the <strong>User</strong> role.
+          </p>
+
+          <!-- Insurer -->
+          <div class="demo-credentials">
+            <div>
+              <span
+                class="label"
+                style="display: inline-block; text-align: center"
+              >
+                Insurer
+              </span>
+              <code>insurer@autologix.dev</code>
+            </div>
+            <div>
+              <span class="label">Password: <code>Dev123!@#</code></span>
+            </div>
+          </div>
+
+          <!-- Service -->
+          <div class="demo-credentials">
+            <div>
+              <span
+                class="label"
+                style="display: inline-block; text-align: center"
+              >
+                Service
+              </span>
+              <code>service@autologix.dev</code>
+            </div>
+            <div>
+              <span class="label">Password: <code>Dev123!@#</code></span>
+            </div>
+          </div>
+
+          <!-- User -->
+          <div class="demo-credentials">
+            <div>
+              <span
+                class="label"
+                style="display: inline-block; text-align: center"
+              >
+                User
+              </span>
+              <code>test@test.test</code>
+            </div>
+            <div>
+              <span class="label">Password: <code>zaq1@WSX</code></span>
+            </div>
+          </div>
+
+          <p class="note-warn small">
+            <strong>Note:</strong> the API runs on a free hosting plan, so after
+            a longer period of inactivity it may “sleep” and the
+            <strong>first response</strong> can take longer. The database is
+            <strong>PostgreSQL on Neon</strong> (also free tier), so
+            occasionally the first request after a break may have higher
+            latency.
+          </p>
+
+          <p class="muted small">
+            If you want to “wake up” the API faster, you can open the health
+            endpoint:
+            <a
+              href="https://autologix-wxkf.onrender.com/health?db=true"
+              target="_blank"
+              rel="noopener"
+              class="inline-link"
+            >
+              /health?db=true
+            </a>
+          </p>
+        </div>
+
+        <!-- Links -->
+        <div class="project-links project-links--row">
           <a
-            href="https://github.com/mareksigmund/AutoLogix"
+            href="https://autologix-git-master-mareksigmunds-projects.vercel.app/"
             target="_blank"
-            class="btn github-btn is-disabled"
+            rel="noopener"
+            class="btn btn-primary"
+            aria-label="Open AutoLogix demo"
+          >
+            🌐 Open demo
+          </a>
+
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/AutoLogixUI"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-github"
+            aria-label="View AutoLogix UI code on GitHub"
           >
             <svg
               class="github-icon"
@@ -237,7 +429,29 @@
                 d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
               />
             </svg>
-            Zobacz kod na GitHub
+            UI code (GitHub)
+          </a>
+
+          <a
+            href="https://github.com/mareksigmund/Projekty/tree/main/AutoLogix"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-github"
+            aria-label="View AutoLogix API code on GitHub"
+          >
+            <svg
+              class="github-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              width="20"
+              height="20"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.08-2.7-1.08-.36-.91-.88-1.15-.88-1.15-.72-.5.06-.49.06-.49.8.06 1.22.83 1.22.83.71 1.21 1.86.86 2.31.66.07-.52.28-.86.5-1.06-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82A7.63 7.63 0 018 4.59a7.6 7.6 0 012 .27c1.53-1.03 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.28.24.53.73.53 1.48v2.2c0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+            API code (GitHub)
           </a>
         </div>
       </div>
@@ -246,7 +460,7 @@
     <footer>
       <div class="footer-container">
         <p class="footer-name">© 2025 Marek Sigmund</p>
-        <p class="footer-tagline">Stworzone z pasją i odrobiną kawy ☕</p>
+        <p class="footer-tagline">Built with passion and a bit of coffee ☕</p>
         <div class="footer-links">
           <a href="../assets/cv/CV_Marek.pdf" target="_blank">CV</a>
           <a href="https://github.com/mareksigmund/Projekty" target="_blank"
